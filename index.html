@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Ma Valentine 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.15);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      max-width: 400px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    button {
+      margin: 15px;
+      padding: 12px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .yes {
+      background: #fff;
+      color: #ff4f81;
+    }
+
+    .no {
+      background: transparent;
+      border: 2px solid white;
+      color: white;
+      position: absolute;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>💘 Ma chérie 💘</h1>
+    <p>
+      Depuis que je te connais, chaque jour est plus beau.<br><br>
+      Est-ce que tu veux être<br>
+      <strong>ma Valentine ?</strong> 💖
+    </p>
+
+    <button class="yes" onclick="yes()">Oui 😍</button>
+    <button class="no" id="no">Non 😅</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 100);
+      const y = Math.random() * (window.innerHeight - 50);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    function yes() {
+      document.body.innerHTML = `
+        <div style="text-align:center; color:white;">
+          <h1>🥰 OUIIIII 🥰</h1>
+          <p>Je t’aime fort ❤️<br>Rendez-vous le 14 février ✨</p>
+        </div>
+      `;
+    }
+  </script>
+
+</body>
+</html>
